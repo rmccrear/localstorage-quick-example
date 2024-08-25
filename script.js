@@ -1,13 +1,14 @@
-// get saved data from localStorage
+// 3. Get saved data from localStorage
 let petName = localStorage.getItem("pet-name");
 
-// set the text in the DOM if the saved data exists.
+// 4. Set the text in the DOM if the saved data exists.
 if(petName) {
   let nameOutput = document.getElementById("petNameOutput");
   nameOutput.textContent = petName;
 }
 
 function handleSave() {
+  // 1. Get the data from the user
   let nameInput = document.getElementById("petName");
   let petName = nameInput.value;
   
@@ -16,7 +17,7 @@ function handleSave() {
     let nameOutput = document.getElementById("petNameOutput");
     nameOutput.textContent = petName;
   } 
-  // save in localStorage
+  // 2. Save in localStorage
   localStorage.setItem("pet-name", petName);
 }
 
